@@ -27,8 +27,8 @@
           <span>文章管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
+          <el-menu-item index="1-1" @click="$router.push({path: 'articlelist'})">文章列表</el-menu-item>
+          <el-menu-item index="1-2" @click="$router.push({path: 'addarticle'})">文章发布</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="3">
@@ -47,7 +47,10 @@
         <el-header class="icon-menu headernav">
           <div class="header_title">黑马头条后台管理系统</div>
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <!-- 嵌套路由在main里面进行渲染 -->
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
