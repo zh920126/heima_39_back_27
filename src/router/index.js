@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 // 引入组件
 import Login from '@/views/login.vue'
+import Index from '@/views/index.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +11,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    name: 'Index',
+    path: '/index',
+    component: Index
   }
 ]
 
